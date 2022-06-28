@@ -1,0 +1,35 @@
+---
+
+- name: Install REGEN & Start State-Sync.
+  hosts: all
+  remote_user: ubuntu
+  tasks:
+  
+    - name: Update and upgrade apt packages
+      become: yes
+      apt:
+        upgrade: yes
+        update_cache: yes
+
+    - name: Install dependencies
+      become: yes
+      apt:
+        pkg:
+          - curl
+          - wget
+          - git
+          - gcc
+          - make
+          - jq      
+
+    - name: Transfer executable script
+      copy: 
+        src=./scripts/gaia.sh 
+        dest=/home/ubuntu 
+        mode=0777
+ 
+    - name: Execute the script
+      command: bash /home/ubuntu/gaia.sh
+
+    - name: Start regen process
+      shell: nohup /home/ubuntu/go/bin/regen start --x-crisis-skip-assert-invariants --home /home/ubuntu/.regen > /dev/null 2>&1 &

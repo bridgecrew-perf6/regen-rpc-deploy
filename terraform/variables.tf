@@ -1,0 +1,4 @@
+variable "ssh-pubkey" {
+  type        = string
+  default     = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDcDDdc4mxWsjGMuLy9CmpGcS1/8/x+a1SiijgBwlbz9QyopyeuDjlNIltnKyGN1TRoiotgr60eRCTEOi9eG29lYummeUZPGOgasNNi8jAr1IQs+Sj5Q1Mesc6VICLZdGOYTx2+LkNgLQxz1BsEa2FKAwbbJ/ekLC8ugFXMIPF6L3q9zeDJN9rc38pR7jx9H6rSYJu9U8jlcnoz3ZRowU2IPe/X3RDukMnwR12CNRdmiVo73gJmUrYBHFn9cFVXB0A0kqFe8XqmCuZsyhH4f423NgCfKuOgLn0/xnE2B697IxomONnR2XfauGKGI4EDXOwiMoALz/st1mjHOR+rFZIFB6SThaWQ0MDfQ1LPXadnovdmcgqdwcqEgucd/qa54R+n4IWXc5AkDJdDu1E2n3buvVyqkSWsF6hxuxpccZ4nAOdw/r61wxDBoWS540KV4LoFlsXoEauDRbs1VHHCyBTs2yqB6rc5IyaNZTOa16BMxUoZ9LWVaggYxutnewWK9rk= shawn@ubuhome"
+}
